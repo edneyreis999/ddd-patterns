@@ -1,11 +1,30 @@
-## Referência
+# Project Name
+DDD: Modelagem Tática e Patterns
+## Description
 
-Para iniciar este projeto, utilizei o seguinte guia como referência:
+Desafio curso Full Cycle. Modelagem Tática e Patterns na prática.
 
-[Configurando um Projeto Node.js com TypeScript, ESLint e Prettier](https://blog.tericcabrel.com/set-up-a-nodejs-project-with-typescript-eslint-and-prettier/)
+## Scripts
 
-O tutorial fornecido no link acima foi extremamente útil para a configuração inicial do ambiente de desenvolvimento.
+- `npm test`: Run tests
+- `npm run tsc`: TypeScript compile
 
----
+## Installation
 
-**Observação:** Este arquivo `read.me` serve como uma introdução ao projeto e pode ser expandido com mais detalhes sobre a estrutura, instruções de instalação e uso, entre outros tópicos relevantes.
+To install the project, follow these steps:
+
+1. Clone the repository to your local machine.
+2. Install dependencies using `npm install`.
+
+## Usage
+
+- `npm run test`
+
+## Contributing
+
+If you'd like to contribute, please fork the repository and make your changes. Pull requests are welcome.
+
+## License
+
+This project is licensed under the [License Name] License - see the [LICENSE](LICENSE) file for details.
+
