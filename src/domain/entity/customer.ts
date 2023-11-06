@@ -1,3 +1,4 @@
+import { CustomerService } from "../service/customer.service";
 import { Address } from "./value-object/address";
 
 /**
@@ -21,6 +22,8 @@ export class Customer {
     this._id = id;
     this._name = name;
     this.validate();
+
+    CustomerService.notifyCustomerCreatedEvent({ customerId: id, customerName: name });
   }
 
   validate() {
@@ -39,6 +42,8 @@ export class Customer {
 
   changeAddress(address: Address) {
     this._address = address;
+
+    CustomerService.notifyAddressChangedEvent({ customer: this });
   }
 
   isActive(): boolean {
@@ -79,4 +84,5 @@ export class Customer {
   public get rewardPoints(): number {
     return this._rewardPoints;
   }
+
 }
