@@ -1,10 +1,12 @@
+import { AgreggateRoot } from "../../@shared/domain/aggregate-root";
 import { CustomerService } from "../service/customer.service";
+import { CustomerCreated } from "./customer-created.event";
 import { Address } from "./value-object/address";
 
 /**
  * Customer class represents a customer in the system.
  */
-export class Customer {
+export class Customer extends AgreggateRoot {
   private _id: string;
   private _name: string = "";
   private _address!: Address;
@@ -19,6 +21,7 @@ export class Customer {
  * @param name - The name of the customer.
  */
   constructor(id: string, name: string) {
+    super();
     this._id = id;
     this._name = name;
     this.validate();
@@ -38,6 +41,7 @@ export class Customer {
   changeName(name: string) {
     this._name = name;
     this.validate();
+    this.addEvent(new CustomerCreated(this.id, name));
   }
 
   changeAddress(address: Address) {

@@ -20,6 +20,7 @@
     "tsc": "tsc"
   },
   "dependencies": {
+    "eventemitter2": "^6.4.9",
     "reflect-metadata": "^0.1.13",
     "sequelize": "^6.34.0",
     "sequelize-typescript": "^2.1.5",
